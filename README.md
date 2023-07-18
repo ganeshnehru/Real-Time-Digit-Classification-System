@@ -5,10 +5,10 @@ The Digit Detection System is a powerful computer vision application that I have
 This system is designed to address the need for automated digit recognition in various domains, including postal sorting, check processing, and form/document analysis. By leveraging advanced algorithms and machine learning, the system can effectively analyze the distinctive patterns and shapes of handwritten digits, ensuring accurate classification.
 
 ## Key Features
-**Robust Digit Recognition:** The system employs sophisticated preprocessing techniques, feature extraction, and CNN-based classification algorithms to ensure robust and reliable digit detection.
-**Versatility:** It can handle diverse handwriting styles, variations in digit appearance, and different writing utensils, making it suitable for a wide range of digit recognition scenarios.
-**High Accuracy:** Through extensive training on labeled datasets, the system has achieved exceptional accuracy in digit detection, ensuring precise and reliable results.
-**Efficiency and Productivity:** By automating the digit recognition process, the system significantly improves efficiency, reduces errors, and enhances productivity in various industries and applications.
+* **Robust Digit Recognition:** The system employs sophisticated preprocessing techniques, feature extraction, and CNN-based classification algorithms to ensure robust and reliable digit detection.
+* **Versatility:** It can handle diverse handwriting styles, variations in digit appearance, and different writing utensils, making it suitable for a wide range of digit recognition scenarios.
+* **High Accuracy:** Through extensive training on labeled datasets, the system has achieved exceptional accuracy in digit detection, ensuring precise and reliable results.
+* **Efficiency and Productivity:** By automating the digit recognition process, the system significantly improves efficiency, reduces errors, and enhances productivity in various industries and applications.
 
 ## CNN Model
 | Layer (type)       | Output Shape        |
