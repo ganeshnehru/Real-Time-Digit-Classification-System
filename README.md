@@ -1,7 +1,16 @@
 # Real-Time Digit Detection System
-This Real-Time Digit Detection application allows users to utilize their webcam or input video file to recognize digits in the video. The application will automatically detect digits in the frame, which will be be accompanied by bounding boxes around each digit, along with their predicted digit value above each bounding box. 
+The Digit Detection System is a powerful computer vision application that I have developed to accurately identify and recognize handwritten digits. It utilizes state-of-the-art techniques, particularly convolutional neural networks (CNNs), to achieve precise digit detection within images.
 
-## The Model
+## Introduction
+This system is designed to address the need for automated digit recognition in various domains, including postal sorting, check processing, and form/document analysis. By leveraging advanced algorithms and machine learning, the system can effectively analyze the distinctive patterns and shapes of handwritten digits, ensuring accurate classification.
+
+## Key Features
+**Robust Digit Recognition:** The system employs sophisticated preprocessing techniques, feature extraction, and CNN-based classification algorithms to ensure robust and reliable digit detection.
+**Versatility:** It can handle diverse handwriting styles, variations in digit appearance, and different writing utensils, making it suitable for a wide range of digit recognition scenarios.
+**High Accuracy:** Through extensive training on labeled datasets, the system has achieved exceptional accuracy in digit detection, ensuring precise and reliable results.
+**Efficiency and Productivity:** By automating the digit recognition process, the system significantly improves efficiency, reduces errors, and enhances productivity in various industries and applications.
+
+## CNN Model
 | Layer (type)       | Output Shape        |
 | ------------------ | ------------------- |
 | conv2d             | (None, 26, 26, 64) |
@@ -14,7 +23,19 @@ This Real-Time Digit Detection application allows users to utilize their webcam 
 | activation_2       | (None, 3, 3, 64)   |
 | max_pooling2d_2    | (None, 1, 1, 64)   |
 
-The model was developed using Tensorflow Keras. Implemented three convolutional layers, accompanied by two fully connected layers with Relu and Softmax activation functions. Compiled the model with the sparse categorical cross-entropy loss function, Adam optimizer, and accuracy as the evaluation metric. The model achieved a test accuracy of 98%, indicating the model's ability to classify handwritten digits effectively.
+The CNN model implementation described in the given model summary consists of several layers for image processing. Each layer performs specific operations on the input data, gradually transforming it to extract meaningful features.
+
+The model begins with a conv2d layer, which applies a 2-dimensional convolution operation to the input data. This layer has an output shape of (None, 26, 26, 64), indicating that it produces 64 feature maps with a spatial resolution of 26x26.
+
+The activation layer follows the convolutional layer, applying an activation function to introduce non-linearity into the model. It preserves the same output shape as the previous layer, (None, 26, 26, 64).
+
+Next, a max_pooling2d layer is applied to downsample the feature maps by selecting the maximum value within a defined window. This process reduces the spatial dimensions of the feature maps, resulting in an output shape of (None, 13, 13, 64).
+
+The model continues with additional conv2d, activation, and max_pooling2d layers, gradually reducing the spatial dimensions. These layers operate similarly to the initial layers, but with smaller feature map sizes. The subsequent layers have output shapes of (None, 11, 11, 64), (None, 5, 5, 64), (None, 3, 3, 64), and (None, 1, 1, 64).
+
+The activation layers introduce non-linearity to the model, allowing it to learn complex patterns and representations from the input data. The max-pooling layers reduce the spatial dimensions, aiding in capturing the most relevant information while also improving computational efficiency.
+
+Overall, this CNN model implementation utilizes a series of convolutional, activation, and max-pooling layers to process the input data. By gradually reducing the spatial dimensions and increasing the number of channels (features), the model learns to extract and identify important features in the input images.
 
 ## Otsu Thresholding
 I employed Otsu thresholding as a crucial step in the image processing pipeline. Otsu thresholding was chosen for its ability to automatically determine an optimal threshold value to distinguish foreground (digits) from the background in the input images.
