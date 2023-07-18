@@ -16,8 +16,14 @@ This Real-Time Digit Detection application allows users to utilize their webcam 
 
 The model was developed using Tensorflow Keras. Implemented three convolutional layers, accompanied by two fully connected layers with Relu and Softmax activation functions. Compiled the model with the sparse categorical cross-entropy loss function, Adam optimizer, and accuracy as the evaluation metric. The model achieved a test accuracy of 98%, indicating the model's ability to classify handwritten digits effectively.
 
-**Otsu Thresholding:**
-Otsu thresholding was utilized to optimize digit recognition. Below are examples of the MNIST digits before and after applying Otsu thresholding.
+## Otsu Thresholding
+I employed Otsu thresholding as a crucial step in the image processing pipeline. Otsu thresholding was chosen for its ability to automatically determine an optimal threshold value to distinguish foreground (digits) from the background in the input images.
+
+By using Otsu thresholding, I aimed to maximize the separation between the foreground and background pixels, enabling accurate and efficient digit segmentation. This technique allowed me to effectively isolate the digits of interest, regardless of variations in lighting conditions, image noise, or background complexity.
+
+Otsu thresholding not only simplified the segmentation process but also enhanced the overall performance of the digit recognition system. By obtaining clean and well-defined digit regions, subsequent stages of the system, such as feature extraction and classification, could focus on the relevant information, leading to improved accuracy and robustness.
+
+The use of Otsu thresholding eliminated the need for manual threshold selection and ensured adaptability to different types of input images, making the digit recognition system more versatile and capable of handling a wide range of digit patterns. Overall, Otsu thresholding played a vital role in achieving reliable and efficient digit recognition results in my system. Below are examples of the MNIST digits before and after applying Otsu thresholding.
 
 |       Before        |         After        |
 | ------------------ | ------------------- |
