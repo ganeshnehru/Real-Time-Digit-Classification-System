@@ -1,4 +1,4 @@
-# Real-Time Digit Detection
+# Real-Time Digit Detection System
 This Real-Time Digit Detection application allows users to utilize their webcam or input video file to recognize digits in the video. The application will automatically detect digits in the frame, which will be be accompanied by bounding boxes around each digit, along with their predicted digit value above each bounding box. 
 
 ## The Model
