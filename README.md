@@ -52,8 +52,8 @@ The use of Otsu thresholding eliminated the need for manual threshold selection 
 | <img src="img/nine_before.png" alt="" width="300" height="300" /> | <img src="img/nine_after.png" alt="" width="300" height="300" /> |
 
 ## Result
-![Detection Video](img/detection.gif)
-![Detection Image](img/detection_img.png)
+![Detection Video](img/detection_gif.gif)
+![Detection Image](img/detection_png.png)
 
 
 
